@@ -1,10 +1,12 @@
-const toggle = document.querySelector(".menu-toggle");
-const nav = document.querySelector("nav");
+document.addEventListener("DOMContentLoaded", () => {
 
-toggle.onclick = () => {
-    nav.classList.toggle("active");
-};
+    const toggle = document.querySelector(".menu-toggle");
+    const nav = document.querySelector("nav");
 
-document.querySelector("form").addEventListener("submit", function(){
-    alert("Message sent successfully ✅");
+    if(toggle && nav){
+        toggle.addEventListener("click", () => {
+            nav.classList.toggle("active");
+        });
+    }
+
 });
